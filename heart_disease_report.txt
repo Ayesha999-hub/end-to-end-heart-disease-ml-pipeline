@@ -1,0 +1,70 @@
+Heart Disease Prediction & Machine Learning Analysis Report
+
+1. Introduction
+The objective of this assignment was to analyze the Cleveland Heart Disease dataset and build machine learning models to predict heart disease.
+One-line interpretation: This project applies full ML workflow to a real medical dataset for binary classification.
+
+2. Dataset Description
+- Dataset: Cleveland Heart Disease Dataset
+- Total Samples: 303
+- Features: 14 (13 input + 1 target)
+- Target: 0 = No disease, 1 = Disease
+One-line interpretation: A small, well-known medical dataset suitable for classification benchmarking.
+
+3. Data Preprocessing
+- Missing values handled (ca: 4, thal: 2)
+- Removed rows: 6
+- Final dataset: 297 rows
+- Encoding + scaling applied
+One-line interpretation: Cleaned and standardized data ensured models received consistent inputs.
+
+4. Exploratory Data Analysis (EDA)
+- Class distribution: 53% vs 46%
+One-line interpretation: Balanced dataset reduces bias toward any single class.
+
+5. Clustering Analysis
+K-Means:
+- Optimal clusters: 2
+- Silhouette score ~ 0.16
+- ARI: 0.25
+
+Hierarchical:
+- ARI vs KMeans: 0.37
+One-line interpretation: Unsupervised learning partially separates patients but is not strongly aligned with true labels.
+
+6. Dimensionality Reduction (PCA)
+- 10 components required for 90% variance
+One-line interpretation: Most information is distributed across many features, not just a few.
+
+7. Supervised Learning Models
+Random Forest:
+- Accuracy: 82%
+- AUC: 0.94
+
+XGBoost:
+- Accuracy: 87%
+- AUC: 0.90
+One-line interpretation: Ensemble models performed strongly on structured medical data.
+
+8. Neural Network Models (MLP)
+- Accuracy: 87%
+- Best F1: ~0.85
+- Regularization improved stability
+One-line interpretation: Deep learning achieved similar performance but required tuning.
+
+9. CNN on MNIST
+- Accuracy: 97%
+One-line interpretation: CNN effectively learned spatial patterns in image data.
+
+10. Feature Maps
+- Shape: (1, 28, 28, 16)
+One-line interpretation: CNN filters captured meaningful visual patterns.
+
+11. Deployment
+- Model saved with joblib
+- Streamlit app created
+One-line interpretation: Model successfully converted into usable application.
+
+12. Conclusion
+End-to-end ML pipeline completed successfully.
+One-line interpretation: Strong predictive system built for heart disease detection.
